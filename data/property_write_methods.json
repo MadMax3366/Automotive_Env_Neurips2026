@@ -1,0 +1,1059 @@
+{
+  "summary": {
+    "unreadable": 17,
+    "dumpsys_ivehicle": 26,
+    "direct_set": 184,
+    "total": 227
+  },
+  "by_property": {
+    "CURRENT_POWER_POLICY": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "FUEL_DOOR_OPEN": {
+      "areas": {
+        "0x0": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "EV_CHARGE_PORT_OPEN": {
+      "areas": {
+        "0x0": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "FUEL_CONSUMPTION_UNITS_DISTANCE_OVER_VOLUME": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "MIRROR_LOCK": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "MIRROR_FOLD": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "EV_CHARGE_SWITCH": {
+      "areas": {
+        "0x0": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_STEERING_WHEEL_HEAT": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "HVAC_TEMPERATURE_DISPLAY_UNITS": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "DISTANCE_DISPLAY_UNITS": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "FUEL_VOLUME_DISPLAY_UNITS": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "TIRE_PRESSURE_DISPLAY_UNITS": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "EV_BATTERY_DISPLAY_UNITS": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "0x11400605": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "DISPLAY_BRIGHTNESS": {
+      "areas": {
+        "0x0": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HEADLIGHTS_SWITCH": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "HIGH_BEAM_LIGHTS_SWITCH": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "HAZARD_LIGHTS_SWITCH": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "CABIN_LIGHTS_SWITCH": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "FRONT_FOG_LIGHTS_SWITCH": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "REAR_FOG_LIGHTS_SWITCH": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "AP_POWER_STATE_REPORT": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "RANGE_REMAINING": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "EV_CHARGE_CURRENT_DRAW_LIMIT": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "EV_CHARGE_PERCENT_LIMIT": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "HVAC_TEMPERATURE_VALUE_SUGGESTION": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "VEHICLE_MAP_SERVICE": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "INITIAL_USER_INFO": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "SWITCH_USER": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "CREATE_USER": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "REMOVE_USER": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "USER_IDENTIFICATION_ASSOCIATION": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "HVAC_DEFROSTER": {
+      "areas": {
+        "0x1": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x2": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_ELECTRIC_DEFROSTER_ON": {
+      "areas": {
+        "0x1": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x2": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "WINDOW_LOCK": {
+      "areas": {
+        "0x540": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "WINDOW_POS": {
+      "areas": {
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x100": {
+          "method": "direct_set"
+        },
+        "0x400": {
+          "method": "direct_set"
+        },
+        "0x10000": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "WINDOW_MOVE": {
+      "areas": {
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x100": {
+          "method": "direct_set"
+        },
+        "0x400": {
+          "method": "direct_set"
+        },
+        "0x10000": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "HVAC_SIDE_MIRROR_HEAT": {
+      "areas": {
+        "0x3": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "MIRROR_Z_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x2": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "MIRROR_Z_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x2": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "MIRROR_Y_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x2": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "MIRROR_Y_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x2": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "HVAC_AC_ON": {
+      "areas": {
+        "0x75": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_MAX_AC_ON": {
+      "areas": {
+        "0x75": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_MAX_DEFROST_ON": {
+      "areas": {
+        "0x5": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x70": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_RECIRC_ON": {
+      "areas": {
+        "0x75": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_DUAL_ON": {
+      "areas": {
+        "0x75": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_AUTO_ON": {
+      "areas": {
+        "0x75": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_POWER_ON": {
+      "areas": {
+        "0x75": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_AUTO_RECIRC_ON": {
+      "areas": {
+        "0x75": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "SEAT_BELT_BUCKLED": {
+      "areas": {
+        "0x1": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x4": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x10": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x40": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x20": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "HVAC_FAN_SPEED": {
+      "areas": {
+        "0x75": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "HVAC_FAN_DIRECTION": {
+      "areas": {
+        "0x75": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "HVAC_SEAT_TEMPERATURE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "HVAC_SEAT_VENTILATION": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_BELT_HEIGHT_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_BELT_HEIGHT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_FORE_AFT_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_FORE_AFT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_BACKREST_ANGLE_1_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_BACKREST_ANGLE_1_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_BACKREST_ANGLE_2_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_BACKREST_ANGLE_2_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_HEIGHT_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_HEIGHT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_DEPTH_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_DEPTH_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_TILT_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_TILT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_LUMBAR_FORE_AFT_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_LUMBAR_FORE_AFT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_LUMBAR_SIDE_SUPPORT_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_LUMBAR_SIDE_SUPPORT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_HEADREST_HEIGHT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_HEADREST_ANGLE_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_HEADREST_ANGLE_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_HEADREST_FORE_AFT_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "SEAT_HEADREST_FORE_AFT_MOVE": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "READING_LIGHTS_SWITCH": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "HVAC_TEMPERATURE_SET": {
+      "areas": {
+        "0x31": {
+          "method": "direct_set"
+        },
+        "0x44": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "DOOR_LOCK": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "DOOR_POS": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "direct_set"
+        },
+        "0x40": {
+          "method": "direct_set"
+        },
+        "0x20000000": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "0x21100104": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "0x21102a11": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "0x21202a11": {
+      "areas": {
+        "0x0": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    },
+    "0x21402a11": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "0x21602a11": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "0x21702a12": {
+      "areas": {
+        "0x0": {
+          "method": "unreadable"
+        }
+      }
+    },
+    "0x21e01111": {
+      "areas": {
+        "0x0": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "0x23400103": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x2": {
+          "method": "direct_set"
+        },
+        "0x10000": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "0x25600102": {
+      "areas": {
+        "0x31": {
+          "method": "direct_set"
+        },
+        "0x44": {
+          "method": "direct_set"
+        }
+      }
+    },
+    "0x26200101": {
+      "areas": {
+        "0x1": {
+          "method": "direct_set"
+        },
+        "0x4": {
+          "method": "direct_set"
+        },
+        "0x10": {
+          "method": "dumpsys_ivehicle"
+        },
+        "0x40": {
+          "method": "dumpsys_ivehicle"
+        }
+      }
+    }
+  }
+}

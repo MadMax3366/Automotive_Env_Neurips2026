@@ -1,0 +1,7 @@
+Automotive-ENV
+Copyright 2026 The Automotive-ENV Authors
+
+This project is built on AndroidWorld (https://github.com/google-research/android_world),
+Copyright The android_world Authors, licensed under the Apache License, Version 2.0.
+Files originating from AndroidWorld keep their original copyright headers; several of them
+have been modified for Automotive-ENV.

@@ -1,0 +1,142 @@
+{
+  "_meta": {
+    "description": "HVAC UI button to VHAL property mapping, verified on AAOS_debug emulator",
+    "verified_date": "2026-04-20",
+    "emulator": "AAOS_debug:5554",
+    "note": "reachable_values are UI-observable values; may be subset of VHAL catalog range"
+  },
+  "HVAC_POWER_ON": {
+    "id": 354419984,
+    "id_hex": "0x15200510",
+    "area": 117,
+    "area_hex": "0x75",
+    "ui_button": "Snowflake icon (bottom left, main power)",
+    "value_type": "toggle",
+    "reachable_values": [0, 1],
+    "labels": {"0": "OFF", "1": "ON"},
+    "verified": true
+  },
+  "HVAC_AC_ON": {
+    "id": 354419973,
+    "id_hex": "0x15200505",
+    "area": 117,
+    "area_hex": "0x75",
+    "ui_button": "AC slash icon (top right)",
+    "value_type": "toggle",
+    "reachable_values": [0, 1],
+    "labels": {"0": "AC OFF", "1": "AC ON"},
+    "verified": true
+  },
+  "HVAC_RECIRC_ON": {
+    "id": 354419976,
+    "id_hex": "0x15200508",
+    "area": 117,
+    "area_hex": "0x75",
+    "ui_button": "Car icon with arrows (top left)",
+    "value_type": "toggle",
+    "reachable_values": [0, 1],
+    "labels": {"0": "External air", "1": "Recirculation"},
+    "verified": true
+  },
+  "HVAC_AUTO_ON": {
+    "id": 354419978,
+    "id_hex": "0x1520050a",
+    "area": 117,
+    "area_hex": "0x75",
+    "ui_button": "AUTO slash button (bottom middle)",
+    "value_type": "toggle",
+    "reachable_values": [0, 1],
+    "labels": {"0": "Manual", "1": "AUTO"},
+    "verified": true
+  },
+  "HVAC_DEFROSTER_FRONT": {
+    "id": 320865540,
+    "id_hex": "0x13200504",
+    "area": 1,
+    "area_hex": "0x1",
+    "ui_button": "Front defroster icon (bottom left, 2nd from power)",
+    "value_type": "toggle",
+    "reachable_values": [0, 1],
+    "labels": {"0": "OFF", "1": "ON"},
+    "verified": true
+  },
+  "HVAC_DEFROSTER_REAR": {
+    "id": 320865540,
+    "id_hex": "0x13200504",
+    "area": 2,
+    "area_hex": "0x2",
+    "ui_button": "Rear defroster icon (bottom left, 3rd from power)",
+    "value_type": "toggle",
+    "reachable_values": [0, 1],
+    "labels": {"0": "OFF", "1": "ON"},
+    "verified": true
+  },
+  "HVAC_FAN_DIRECTION": {
+    "id": 356517121,
+    "id_hex": "0x15400501",
+    "area": 117,
+    "area_hex": "0x75",
+    "ui_button": "Fan direction icons (4 buttons in middle)",
+    "value_type": "enum",
+    "reachable_values": [1, 3, 2, 6],
+    "labels": {
+      "1": "Face only",
+      "3": "Face + Feet",
+      "2": "Feet only",
+      "6": "Feet + Defrost"
+    },
+    "ui_button_order": [
+      {"position": "leftmost", "icon": "person head", "value": 1, "label": "Face only"},
+      {"position": "2nd", "icon": "person head + feet", "value": 3, "label": "Face + Feet"},
+      {"position": "3rd", "icon": "feet", "value": 2, "label": "Feet only"},
+      {"position": "rightmost", "icon": "feet + defrost", "value": 6, "label": "Feet + Defrost"}
+    ],
+    "verified": true
+  },
+  "HVAC_FAN_SPEED": {
+    "id": 356517120,
+    "id_hex": "0x15400500",
+    "area": 117,
+    "area_hex": "0x75",
+    "ui_button": "Fan speed bar (OFF | 4 dots | MAX)",
+    "value_type": "level",
+    "reachable_values": [1, 2, 3, 4, 5, 6],
+    "labels": {"1": "OFF (level 1)", "2": "low", "3": "low-mid", "4": "mid", "5": "high", "6": "MAX"},
+    "note": "UI OFF position = VHAL value 1, not 0",
+    "verified": true
+  },
+  "HVAC_SEAT_TEMPERATURE_DRIVER": {
+    "id": 356517131,
+    "id_hex": "0x1540050b",
+    "area": 1,
+    "area_hex": "0x1",
+    "ui_button": "Seat heater button (bottom right)",
+    "value_type": "level",
+    "reachable_values": [0, 1, 2],
+    "labels": {"0": "OFF", "1": "Level 1", "2": "MAX"},
+    "note": "Catalog defines range [-2, 2] but UI only reaches [0, 2]. Click cycles 0 \u2192 1 \u2192 2 \u2192 0.",
+    "verified": true
+  },
+  "HVAC_TEMPERATURE_SET_DRIVER": {
+    "id": 358614275,
+    "id_hex": "0x15600503",
+    "area": 49,
+    "area_hex": "0x31",
+    "ui_button": "Left blue vertical bar with +/- (driver side temperature)",
+    "value_type": "range",
+    "reachable_range": [16.0, 32.0],
+    "unit": "celsius",
+    "verified": true
+  },
+  "HVAC_TEMPERATURE_SET_PASSENGER": {
+    "id": 358614275,
+    "id_hex": "0x15600503",
+    "area": 68,
+    "area_hex": "0x44",
+    "ui_button": "Right blue vertical bar with +/- (passenger side temperature)",
+    "value_type": "range",
+    "reachable_range": [16.0, 32.0],
+    "unit": "celsius",
+    "verified": true
+  }
+}

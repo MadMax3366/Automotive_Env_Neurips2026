@@ -1,0 +1,4490 @@
+[
+  {
+    "task_id": "suggestive_hvac_cold_driver_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I'm feeling cold.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 25,
+          "desc": "Turn off AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 40,
+          "desc": "Raise driver temperature to >=24C"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "ge",
+          "value": 1,
+          "weight": 35,
+          "desc": "Turn on driver seat heater"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_hot_driver_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It's too hot in here.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Turn on AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 22.0,
+          "weight": 35,
+          "desc": "Lower driver temperature to <=22C"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 4,
+          "weight": 25,
+          "desc": "Raise fan speed to >=4"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_windshield_fog_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The windshield is fogging up.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 60,
+          "desc": "Turn on front defroster"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 20,
+          "desc": "Turn on AC to dehumidify"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 4,
+          "weight": 20,
+          "desc": "Raise fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_rear_window_fog_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The rear window has heavy condensation.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 2,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 2,
+          "op": "eq",
+          "value": 1,
+          "weight": 100,
+          "desc": "Turn on rear defroster"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_driving_tunnel_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Entering a long tunnel with heavy exhaust fumes.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 100,
+          "desc": "Enable air recirculation"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_fresh_air_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I want to feel some fresh air.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 60,
+          "desc": "Switch to external air"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 3,
+          "weight": 40,
+          "desc": "Increase fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_passenger_cold_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My passenger says they are cold.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 20.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 100,
+          "desc": "Raise passenger temperature to >=24C"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_passenger_hot_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Passenger complains it's too warm on their side.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "le",
+          "value": 22.0,
+          "weight": 60,
+          "desc": "Lower passenger temperature"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Turn on AC"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_face_wind_too_strong_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The wind is blowing in my face too strongly.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 5
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 3,
+          "weight": 50,
+          "desc": "Lower fan speed"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 50,
+          "desc": "Redirect airflow away from face"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_cold_feet_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My feet are freezing.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 60,
+          "desc": "Direct airflow to feet"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 40,
+          "desc": "Raise driver temperature"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_stuffy_air_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The air in here feels stale and stuffy.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 60,
+          "desc": "Switch off recirculation"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 3,
+          "weight": 40,
+          "desc": "Increase fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_winter_morning_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Cold winter morning, I just got in the car and it's freezing.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 15,
+          "desc": "Power on HVAC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 30,
+          "desc": "Raise driver temperature"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "ge",
+          "value": 1,
+          "weight": 30,
+          "desc": "Turn on seat heater"
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Turn on front defroster"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_summer_afternoon_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Scorching summer afternoon, need to cool down the cabin fast.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Turn on AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 20.0,
+          "weight": 30,
+          "desc": "Lower temperature"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 25,
+          "desc": "Raise fan speed"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 15,
+          "desc": "Enable recirculation for faster cooling"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_too_cold_now_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It got too cold, I'm shivering now.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 40,
+          "desc": "Turn off AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 60,
+          "desc": "Raise temperature"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_lazy_setup_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Just make it comfortable for me, I don't want to fiddle with settings.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 100,
+          "desc": "Enable AUTO climate"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_auto_not_working_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Auto climate isn't cooling fast enough, I want more direct control.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 50,
+          "desc": "Disable AUTO"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 50,
+          "desc": "Manually raise fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_defrost_and_hot_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The windows are fogged and I'm also sweating.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 50,
+          "desc": "Turn on front defroster"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 50,
+          "desc": "Turn on AC"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_both_sides_cool_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Both me and my passenger want it cooler.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 22.0,
+          "weight": 35,
+          "desc": "Lower driver temperature"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "le",
+          "value": 22.0,
+          "weight": 35,
+          "desc": "Lower passenger temperature"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Turn on AC"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_seat_cold_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My seat feels really cold.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "ge",
+          "value": 1,
+          "weight": 100,
+          "desc": "Turn on seat heater"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_seat_too_hot_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My back is sweating on this heated seat.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 0,
+          "weight": 100,
+          "desc": "Turn off seat heater"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_family_kids_cold_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My kids in the back are freezing and I'm also a bit chilly.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20.0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 20.0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 35,
+          "desc": "Raise driver temperature"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 35,
+          "desc": "Raise passenger temperature"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 4,
+          "weight": 30,
+          "desc": "Increase fan speed to distribute warmth"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_morning_commute_rain_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Heavy rain outside, windshield is misting over as I drive to work.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Turn on front defroster"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Enable AC to dehumidify"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 40,
+          "desc": "Disable recirculation to improve demisting"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_date_comfort_setup_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I want a quiet comfortable atmosphere, but still cool and fresh.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 6
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 3,
+          "weight": 35,
+          "desc": "Lower fan noise"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Enable gentle AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 23.0,
+          "weight": 30,
+          "desc": "Set cool temperature"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_parked_preheat_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I just parked on a cold morning and want to warm up before stepping out.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Power on HVAC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 25.0,
+          "weight": 40,
+          "desc": "Raise driver temperature >=25C"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "ge",
+          "value": 2,
+          "weight": 35,
+          "desc": "Seat heater to max"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_highway_long_trip_hot_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Long highway trip on a hot day, I'm starting to feel drowsy.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Turn on AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 21.0,
+          "weight": 25,
+          "desc": "Lower temperature"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 25,
+          "desc": "Increase fan speed"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Direct airflow to face to help stay alert"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_early_morning_sleepy_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Early dark morning, I'm tired and the car is freezing.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 15,
+          "desc": "Power on HVAC"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "ge",
+          "value": 1,
+          "weight": 25,
+          "desc": "Seat heater on"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 23.0,
+          "weight": 30,
+          "desc": "Raise temperature"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Face airflow to help stay awake"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_outside_dusty_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Driving through a dusty construction area right now.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 5
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 70,
+          "desc": "Enable recirculation to block dust"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 3,
+          "weight": 30,
+          "desc": "Reduce fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_comfortable_return_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Everyone's settled after a long stop, back to normal comfortable driving.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 6
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 50,
+          "desc": "Enable AUTO to relax"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 22.0,
+          "weight": 25,
+          "desc": "Set temperature to comfortable 22C"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 4,
+          "weight": 25,
+          "desc": "Lower fan to mid level"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_passenger_child_sleeping_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My passenger is a sleeping child, the fan is too noisy for them.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 6
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 20.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 2,
+          "weight": 65,
+          "desc": "Reduce fan speed to minimum"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "ge",
+          "value": 22.0,
+          "weight": 35,
+          "desc": "Slightly warmer on passenger side for child"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_defog_quickly_cold_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Windshield has fogged up badly and it's freezing, I need to see the road.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Turn on front defroster"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 25,
+          "desc": "Raise fan speed"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 20,
+          "desc": "Raise temperature"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 20,
+          "desc": "Disable recirculation for better defog"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_chilly_hands_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My hands are a bit chilly on the wheel.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 23.0,
+          "weight": 100,
+          "desc": "Raise driver temperature"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_warm_it_up_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Warm it up a bit please.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 23.0,
+          "weight": 100,
+          "desc": "Raise temperature"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_cool_it_down_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Could you cool things down a little?",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 23.0,
+          "weight": 60,
+          "desc": "Lower temperature"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Turn on AC"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_blow_my_hair_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The fan is messing up my hair.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 5
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 60,
+          "desc": "Direct airflow away from face"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 3,
+          "weight": 40,
+          "desc": "Lower fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_quiet_please_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Make it quieter in here.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 6
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 2,
+          "weight": 100,
+          "desc": "Reduce fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_sandstorm_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "There's a sandstorm picking up outside.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 100,
+          "desc": "Enable recirculation"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_heavy_traffic_smog_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Stuck in heavy traffic with lots of exhaust.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 60,
+          "desc": "Enable recirculation"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Turn on AC for filtered air"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_rainy_hot_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It's raining and humid, feels sticky inside.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 60,
+          "desc": "Turn on AC to dehumidify"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 4,
+          "weight": 40,
+          "desc": "Increase fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_snowy_drive_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It's snowing heavily, I'm cold and worried about the windshield.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20.0
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 25,
+          "desc": "Raise temperature"
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Turn on front defroster"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "ge",
+          "value": 1,
+          "weight": 35,
+          "desc": "Turn on seat heater"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_desert_extreme_heat_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It's 45 degrees outside, I need maximum cooling now.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Turn on AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 18.0,
+          "weight": 25,
+          "desc": "Minimize temperature"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 6,
+          "weight": 25,
+          "desc": "Fan to maximum"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Enable recirculation"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_allergy_pollen_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My allergies are bad, pollen is everywhere outside today.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 6
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 60,
+          "desc": "Enable recirculation to filter pollen"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 3,
+          "weight": 40,
+          "desc": "Lower fan to reduce particle movement"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_pregnant_passenger_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My pregnant wife is uncomfortable with the cold air.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "ge",
+          "value": 23.0,
+          "weight": 60,
+          "desc": "Raise passenger side temperature"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 40,
+          "desc": "Turn off AC for passenger comfort"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_elderly_parent_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My elderly father in the passenger seat feels cold even when I'm fine.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 22.0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 22.0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "ge",
+          "value": 25.0,
+          "weight": 100,
+          "desc": "Raise passenger temperature without affecting driver"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_getting_sick_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I think I'm catching a cold, need to warm up.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20.0
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 25,
+          "desc": "Turn off AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 24.0,
+          "weight": 40,
+          "desc": "Raise temperature"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "ge",
+          "value": 2,
+          "weight": 35,
+          "desc": "Seat heater to maximum"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_workout_sweaty_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Just finished my gym session, I'm sweating a lot.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 24.0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Turn on AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 20.0,
+          "weight": 25,
+          "desc": "Lower temperature"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 25,
+          "desc": "Raise fan speed"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 20,
+          "desc": "Direct airflow to face"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_ski_resort_arrival_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Just arrived at the ski resort, need to warm up before stepping out.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20.0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 20.0
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 26.0,
+          "weight": 30,
+          "desc": "Maximize driver temperature"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "ge",
+          "value": 26.0,
+          "weight": 30,
+          "desc": "Maximize passenger temperature"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 2,
+          "weight": 25,
+          "desc": "Seat heater to max"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 15,
+          "desc": "Increase fan to distribute heat"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_after_big_meal_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Big lunch, I'm feeling drowsy and warm.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 24.0
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 20.0,
+          "weight": 35,
+          "desc": "Lower temperature to stay alert"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Direct cool air to face"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Turn on AC"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_city_parking_heat_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Car has been sitting in the sun for 3 hours, inside is like an oven.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 15,
+          "desc": "Power on HVAC"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Turn on AC"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 25,
+          "desc": "Maximize fan speed"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 20,
+          "desc": "Keep external air to vent hot air first"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 20.0,
+          "weight": 15,
+          "desc": "Lower temperature"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_entering_garage_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "About to enter an underground parking garage with strong exhaust smell.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 5
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 100,
+          "desc": "Enable recirculation"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_leaving_tunnel_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Just exited the tunnel, air outside is clean now.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 100,
+          "desc": "Disable recirculation, let fresh air in"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_morning_wake_up_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Help me wake up, I need to be alert.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 24.0
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Turn on AC for cool air"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 20.0,
+          "weight": 30,
+          "desc": "Lower temperature"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Direct air to face"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_optimal_cooling_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I want to cool down as efficiently as possible.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 26.0
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Turn on AC"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Enable recirculation for efficiency"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "le",
+          "value": 20.0,
+          "weight": 25,
+          "desc": "Lower temperature"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 5,
+          "weight": 25,
+          "desc": "High fan speed"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_hvac_energy_saving_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Let's save energy but keep it comfortable.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18.0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 6
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "ge",
+          "value": 22.0,
+          "weight": 40,
+          "desc": "Set moderate temperature"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "le",
+          "value": 3,
+          "weight": 30,
+          "desc": "Reduce fan speed"
+        },
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Enable AUTO for efficient control"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_defog_windshield_active_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My windshield keeps fogging up, I can't wait for it to clear.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "temperature": 8,
+        "humidity": 92
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Turn on front defroster"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Enable AC for dehumidify"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "fog",
+            "defrost",
+            "humidity",
+            "visibility"
+          ],
+          "min_hits": 2,
+          "weight": 25,
+          "desc": "Identify fog/visibility risk"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 4,
+          "weight": 10,
+          "desc": "Raise fan speed >=4"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_defog_rear_condensation_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Rear view is getting all blurry from condensation.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 2,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "humidity": 88
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 2,
+          "op": "eq",
+          "value": 1,
+          "weight": 55,
+          "desc": "Turn on rear defroster"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "rear",
+            "condensation",
+            "defrost",
+            "visibility"
+          ],
+          "min_hits": 2,
+          "weight": 30,
+          "desc": "Identify rear condensation"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "ge",
+          "value": 3,
+          "weight": 15,
+          "desc": "Raise fan speed >=3"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_defog_drizzle_visibility_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It just started drizzling, visibility getting worse.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "value": 0
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "humidity": 90,
+        "temperature": 12
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_DEFROSTER",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Turn on front defroster"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Enable AC"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 15,
+          "desc": "External air for dehumidify"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "rain",
+            "drizzle",
+            "visibility",
+            "fog"
+          ],
+          "min_hits": 2,
+          "weight": 25,
+          "desc": "Identify rain/visibility"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_temp_side_warmer_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It's warmer than I'd like on my side.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 25
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 20,
+          "desc": "Lower driver temp to 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 20,
+          "desc": "Lower driver temp to 22"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 23,
+          "weight": 20,
+          "desc": "Lower driver temp to 23"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "driver",
+            "side",
+            "cooler",
+            "lower"
+          ],
+          "min_hits": 1,
+          "weight": 40,
+          "desc": "Reason about driver side"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_temp_passenger_cold_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My passenger keeps complaining about being cold.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 18
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "eq",
+          "value": 22,
+          "weight": 20,
+          "desc": "Raise passenger temp to 22"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "eq",
+          "value": 23,
+          "weight": 20,
+          "desc": "Raise passenger temp to 23"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "eq",
+          "value": 24,
+          "weight": 20,
+          "desc": "Raise passenger temp to 24"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "passenger",
+            "warmer",
+            "higher"
+          ],
+          "min_hits": 1,
+          "weight": 40,
+          "desc": "Reason about passenger"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_temp_touch_cooler_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Can we make it a touch cooler?",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 23
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 35,
+          "desc": "Lower to 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 35,
+          "desc": "Lower to 22"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "cooler",
+            "slight",
+            "touch",
+            "lower"
+          ],
+          "min_hits": 1,
+          "weight": 30,
+          "desc": "Slight adjustment"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_fan_direction_face_blow_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The wind is blowing right in my face, it's bothering my eyes.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 25,
+          "desc": "Redirect to feet"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 3,
+          "weight": 25,
+          "desc": "Redirect to face+feet"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 6,
+          "weight": 25,
+          "desc": "Redirect to feet+defrost"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "direction",
+            "face",
+            "redirect"
+          ],
+          "min_hits": 1,
+          "weight": 25,
+          "desc": "Reason about redirecting"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_fan_feet_still_cold_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "My feet are still freezing even with the heater on.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 22
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 24,
+          "desc": "Point to feet"
+        },
+        {
+          "name": "HVAC_FAN_DIRECTION",
+          "area": 117,
+          "op": "eq",
+          "value": 6,
+          "weight": 25,
+          "desc": "Point to feet+defrost"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 24,
+          "weight": 17,
+          "desc": "Raise driver temp to 24"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 25,
+          "weight": 17,
+          "desc": "Raise driver temp to 25"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "feet",
+            "direction",
+            "feet-mode"
+          ],
+          "min_hits": 1,
+          "weight": 17,
+          "desc": "Reason about feet"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_fan_rear_no_air_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The back seats barely get any air.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 4,
+          "weight": 20,
+          "desc": "Raise fan speed to 4"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 5,
+          "weight": 20,
+          "desc": "Raise fan speed to 5"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 6,
+          "weight": 20,
+          "desc": "Raise fan speed to 6"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "fan",
+            "speed",
+            "higher",
+            "back",
+            "rear"
+          ],
+          "min_hits": 1,
+          "weight": 40,
+          "desc": "Reason about airflow to rear"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_noise_conversation_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It's a bit loud in here, hard to have a conversation.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 5
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Lower fan to 1"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 30,
+          "desc": "Lower fan to 2"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 3,
+          "weight": 25,
+          "desc": "Lower fan to 3"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "quiet",
+            "lower",
+            "fan"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Reason about noise"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_noise_nav_over_fan_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I can barely hear the navigation over the fan.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 6
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 25,
+          "desc": "Lower to 1"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 30,
+          "desc": "Lower to 2"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 3,
+          "weight": 25,
+          "desc": "Lower to 3"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "fan",
+            "quieter",
+            "lower"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Reduce fan noise"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_noise_fan_stressing_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The fan noise is stressing me out.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 5
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Lower to 1"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 2,
+          "weight": 35,
+          "desc": "Lower to 2"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "fan",
+            "reduce",
+            "quieter"
+          ],
+          "min_hits": 1,
+          "weight": 30,
+          "desc": "Reduce stress"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_seat_leather_cold_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "This leather seat is cold from sitting out overnight.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "temperature": 3
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 35,
+          "desc": "Driver seat heat lvl1"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 2,
+          "weight": 35,
+          "desc": "Driver seat heat max"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "seat",
+            "heat",
+            "cold",
+            "warm"
+          ],
+          "min_hits": 1,
+          "weight": 30,
+          "desc": "Reason about cold seat"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_seat_heater_too_long_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "I think I left the seat heater on too long.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 0,
+          "weight": 40,
+          "desc": "Seat heat off"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Seat heat low"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "seat",
+            "heater",
+            "lower",
+            "off"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Reduce seat heat"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_seat_passenger_oven_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Passenger's seat feels like an oven.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 4,
+          "value": 2
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 4,
+          "op": "eq",
+          "value": 0,
+          "weight": 40,
+          "desc": "Passenger seat heat off"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 4,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Passenger seat heat low"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "passenger",
+            "seat",
+            "cooler",
+            "off"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Reduce passenger seat"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_humid_heavy_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "The air feels really damp and heavy.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "humidity": 85
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 50,
+          "desc": "Enable AC for dehumidify"
+        },
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 30,
+          "desc": "External air"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "humid",
+            "damp",
+            "dehumidify",
+            "AC"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Reason about humidity"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_smell_outside_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Something smells off, maybe from outside.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 80,
+          "desc": "Enable recirculation"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "recirculation",
+            "recirc",
+            "external",
+            "outside",
+            "smell"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Reason about outside smell"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_stuffy_no_fresh_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "It's getting stuffy, like there's no fresh air.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "value": 1
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_RECIRC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 0,
+          "weight": 80,
+          "desc": "Disable recirculation"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "fresh",
+            "external",
+            "outside",
+            "recirc"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Reason about fresh air"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_car_sun_baked_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Getting into the car after it baked in the sun all day.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "temperature": 40
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 18,
+          "desc": "Turn on HVAC"
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 27,
+          "desc": "Enable AC"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 5,
+          "weight": 14,
+          "desc": "Fan speed 5"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 6,
+          "weight": 14,
+          "desc": "Fan speed 6"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 18,
+          "weight": 9,
+          "desc": "Temp 18"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 19,
+          "weight": 9,
+          "desc": "Temp 19"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 20,
+          "weight": 9,
+          "desc": "Temp 20"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_steering_hot_touch_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Steering wheel is hot to touch.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "temperature": 36
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 44,
+          "desc": "Enable AC"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 4,
+          "weight": 13,
+          "desc": "Fan 4"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 5,
+          "weight": 13,
+          "desc": "Fan 5"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 6,
+          "weight": 13,
+          "desc": "Fan 6"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "hot",
+            "cool",
+            "AC"
+          ],
+          "min_hits": 1,
+          "weight": 17,
+          "desc": "Reason hot steering"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_heat_drowsy_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "This heat is making me drowsy.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        }
+      ],
+      "sensors": {
+        "temperature": 32
+      }
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 44,
+          "desc": "Enable AC"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 20,
+          "weight": 13,
+          "desc": "Temp 20"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 13,
+          "desc": "Temp 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 13,
+          "desc": "Temp 22"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "cool",
+            "alert",
+            "AC"
+          ],
+          "min_hits": 1,
+          "weight": 17,
+          "desc": "Stay alert"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_comfort_long_drive_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Help me get comfortable for a long drive.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 40,
+          "desc": "Enable AUTO"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 15,
+          "desc": "Temp 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 15,
+          "desc": "Temp 22"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 23,
+          "weight": 15,
+          "desc": "Temp 23"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "auto",
+            "comfortable"
+          ],
+          "min_hits": 1,
+          "weight": 15,
+          "desc": "Use auto for comfort"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_comfort_cozy_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Make it nice and cozy, we'll be driving a while.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 20,
+          "desc": "Power on"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 20,
+          "desc": "Temp 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 20,
+          "desc": "Temp 22"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 23,
+          "weight": 15,
+          "desc": "Temp 23"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "cozy",
+            "comfortable",
+            "warm"
+          ],
+          "min_hits": 1,
+          "weight": 25,
+          "desc": "Reason cozy"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_comfort_before_drive_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Let's get settled in before we hit the road.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 50,
+          "desc": "Enable AUTO"
+        },
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Power on"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "auto",
+            "prepare",
+            "ready"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Prepare cabin"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "suggestive_comfort_you_decide_001",
+    "category": "suggestive",
+    "goal_type": "text",
+    "goal_text": "Prep the cabin the way you think is best.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 60,
+          "desc": "Enable AUTO"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "auto",
+            "default",
+            "best"
+          ],
+          "min_hits": 1,
+          "weight": 40,
+          "desc": "Use default auto"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "ambiguous_turn_it_up_001",
+    "category": "implicit_ambiguous",
+    "goal_type": "text",
+    "goal_text": "Turn it up.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 3
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 9,
+          "desc": "Temp 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 9,
+          "desc": "Temp 22"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 23,
+          "weight": 9,
+          "desc": "Temp 23"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 4,
+          "weight": 9,
+          "desc": "Fan 4"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 5,
+          "weight": 9,
+          "desc": "Fan 5"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "ambiguous",
+            "assume",
+            "interpret",
+            "clarify",
+            "chose",
+            "which"
+          ],
+          "min_hits": 1,
+          "weight": 28,
+          "desc": "Acknowledge ambiguity"
+        },
+        {
+          "type": "safety_warning_visible",
+          "weight": 27,
+          "desc": "Clarification notification"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "ambiguous_set_to_22_001",
+    "category": "implicit_ambiguous",
+    "goal_type": "text",
+    "goal_text": "Set it to 22.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 20
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "value": 24
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 25,
+          "desc": "Driver to 22"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 68,
+          "op": "eq",
+          "value": 22,
+          "weight": 25,
+          "desc": "Passenger to 22"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "driver",
+            "passenger",
+            "both",
+            "which",
+            "side"
+          ],
+          "min_hits": 1,
+          "weight": 30,
+          "desc": "Resolve which side"
+        },
+        {
+          "type": "safety_warning_visible",
+          "weight": 20,
+          "desc": "Clarification notification"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "ambiguous_make_comfortable_001",
+    "category": "implicit_ambiguous",
+    "goal_type": "text",
+    "goal_text": "Make it comfortable.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AUTO_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 50,
+          "desc": "Use AUTO"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 10,
+          "desc": "Temp 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 10,
+          "desc": "Temp 22"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 23,
+          "weight": 10,
+          "desc": "Temp 23"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "comfortable",
+            "assume",
+            "default"
+          ],
+          "min_hits": 1,
+          "weight": 20,
+          "desc": "Default comfort"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "ambiguous_make_warmer_001",
+    "category": "implicit_ambiguous",
+    "goal_type": "text",
+    "goal_text": "Make it warmer.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 18
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "value": 0
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 19,
+          "weight": 15,
+          "desc": "Temp 19"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 20,
+          "weight": 15,
+          "desc": "Temp 20"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 15,
+          "desc": "Temp 21"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 1,
+          "weight": 15,
+          "desc": "Seat low"
+        },
+        {
+          "name": "HVAC_SEAT_TEMPERATURE",
+          "area": 1,
+          "op": "eq",
+          "value": 2,
+          "weight": 15,
+          "desc": "Seat max"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "warmer",
+            "temperature",
+            "seat",
+            "heat"
+          ],
+          "min_hits": 1,
+          "weight": 25,
+          "desc": "Choose warming method"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "ambiguous_cool_down_001",
+    "category": "implicit_ambiguous",
+    "goal_type": "text",
+    "goal_text": "Cool down, please.",
+    "setup": {
+      "vhal": [
+        {
+          "name": "HVAC_POWER_ON",
+          "area": 117,
+          "value": 1
+        },
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "value": 0
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "value": 2
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "value": 24
+        }
+      ]
+    },
+    "validator": {
+      "type": "graded",
+      "checks": [
+        {
+          "name": "HVAC_AC_ON",
+          "area": 117,
+          "op": "eq",
+          "value": 1,
+          "weight": 30,
+          "desc": "Enable AC"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 4,
+          "weight": 10,
+          "desc": "Fan 4"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 5,
+          "weight": 10,
+          "desc": "Fan 5"
+        },
+        {
+          "name": "HVAC_FAN_SPEED",
+          "area": 117,
+          "op": "eq",
+          "value": 6,
+          "weight": 10,
+          "desc": "Fan 6"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 20,
+          "weight": 10,
+          "desc": "Temp 20"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 21,
+          "weight": 10,
+          "desc": "Temp 21"
+        },
+        {
+          "name": "HVAC_TEMPERATURE_SET",
+          "area": 49,
+          "op": "eq",
+          "value": 22,
+          "weight": 10,
+          "desc": "Temp 22"
+        },
+        {
+          "type": "agent_reasoning_contains",
+          "keywords": [
+            "cool",
+            "AC",
+            "fan",
+            "temperature"
+          ],
+          "min_hits": 1,
+          "weight": 10,
+          "desc": "Combined cooling"
+        }
+      ]
+    }
+  }
+]

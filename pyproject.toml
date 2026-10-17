@@ -1,0 +1,56 @@
+# Pyproject used for the docker implementation of the Android World Environment
+# only. The non-docker implementation uses a requirements.txt file.
+
+[build-system]
+# setuptools<81 pin: setup.py uses pkg_resources.resource_filename() to
+# locate grpc_tools's _proto directory. setuptools 81+ removed the implicit
+# pkg_resources export, so bumping past 80.x breaks `pip install -e .`.
+# If you ever need to unpin, rewrite setup.py's proto-include lookup to use
+# importlib.resources.files('grpc_tools').joinpath('_proto') first.
+requires = ["setuptools>=61.0,<81", "grpcio-tools==1.71.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "android_world"
+version = "0.1.0"
+description = "Android World Environment Project"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "absl-py==2.1.0",
+    "android_env==1.2.3",
+    "dm_env==1.6",
+    "fuzzywuzzy==0.18.0",
+    "google-generativeai",
+    "grpcio-tools==1.71.0",
+    "protobuf==5.29.5",
+    "immutabledict==2.0.0",
+    "IPython",
+    "jsonschema==4.17.3",
+    "numpy==1.26.3",
+    "opencv-python",
+    "pandas==2.1.4",
+    "pydub",
+    "python-Levenshtein",
+    "pytest",
+    "requests",
+    "tenacity",
+    "termcolor",
+    "fastapi",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.proto", "*.textproto", "*.xml", "res/xml/*.xml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py","*_test.py"]

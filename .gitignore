@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtualenvs
+.venv/
+venv/
+/env/
+
+# uv / pip
+uv.lock
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / outputs
+*.log
+new_test_*/
+results*/
+pictures/
+
+# Local model weights
+models/

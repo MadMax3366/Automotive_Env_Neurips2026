@@ -1,0 +1,4252 @@
+{
+  "INFO_VIN": {
+    "id": 286261504,
+    "id_hex": "0x11100100",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_MAKE": {
+    "id": 286261505,
+    "id_hex": "0x11100101",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_MODEL": {
+    "id": 286261506,
+    "id_hex": "0x11100102",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "POWER_POLICY_REQ": {
+    "id": 286265121,
+    "id_hex": "0x11100f21",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "POWER_POLICY_GROUP_REQ": {
+    "id": 286265122,
+    "id_hex": "0x11100f22",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CURRENT_POWER_POLICY": {
+    "id": 286265123,
+    "id_hex": "0x11100f23",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "FUEL_DOOR_OPEN": {
+    "id": 287310600,
+    "id_hex": "0x11200308",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_CHARGE_PORT_OPEN": {
+    "id": 287310602,
+    "id_hex": "0x1120030a",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_CHARGE_PORT_CONNECTED": {
+    "id": 287310603,
+    "id_hex": "0x1120030b",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "PARKING_BRAKE_ON": {
+    "id": 287310850,
+    "id_hex": "0x11200402",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "PARKING_BRAKE_AUTO_APPLY": {
+    "id": 287310851,
+    "id_hex": "0x11200403",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "FUEL_LEVEL_LOW": {
+    "id": 287310853,
+    "id_hex": "0x11200405",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "NIGHT_MODE": {
+    "id": 287310855,
+    "id_hex": "0x11200407",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ABS_ACTIVE": {
+    "id": 287310858,
+    "id_hex": "0x1120040a",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "TRACTION_CONTROL_ACTIVE": {
+    "id": 287310859,
+    "id_hex": "0x1120040b",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "FUEL_CONSUMPTION_UNITS_DISTANCE_OVER_VOLUME": {
+    "id": 287311364,
+    "id_hex": "0x11200604",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "MIRROR_LOCK": {
+    "id": 287312708,
+    "id_hex": "0x11200b44",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "MIRROR_FOLD": {
+    "id": 287312709,
+    "id_hex": "0x11200b45",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x11200f05": {
+    "id": 287313669,
+    "id_hex": "0x11200f05",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_CHARGE_SWITCH": {
+    "id": 287313730,
+    "id_hex": "0x11200f42",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_MODEL_YEAR": {
+    "id": 289407235,
+    "id_hex": "0x11400103",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_FUEL_DOOR_LOCATION": {
+    "id": 289407240,
+    "id_hex": "0x11400108",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_EV_PORT_LOCATION": {
+    "id": 289407241,
+    "id_hex": "0x11400109",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ENGINE_OIL_LEVEL": {
+    "id": 289407747,
+    "id_hex": "0x11400303",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "GEAR_SELECTION": {
+    "id": 289408000,
+    "id_hex": "0x11400400",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CURRENT_GEAR": {
+    "id": 289408001,
+    "id_hex": "0x11400401",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "TURN_SIGNAL_STATE": {
+    "id": 289408008,
+    "id_hex": "0x11400408",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "IGNITION_STATE": {
+    "id": 289408009,
+    "id_hex": "0x11400409",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_STEERING_WHEEL_HEAT": {
+    "id": 289408269,
+    "id_hex": "0x1140050d",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -2,
+        "i_max": 2,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_TEMPERATURE_DISPLAY_UNITS": {
+    "id": 289408270,
+    "id_hex": "0x1140050e",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "DISTANCE_DISPLAY_UNITS": {
+    "id": 289408512,
+    "id_hex": "0x11400600",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "FUEL_VOLUME_DISPLAY_UNITS": {
+    "id": 289408513,
+    "id_hex": "0x11400601",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "TIRE_PRESSURE_DISPLAY_UNITS": {
+    "id": 289408514,
+    "id_hex": "0x11400602",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_BATTERY_DISPLAY_UNITS": {
+    "id": 289408515,
+    "id_hex": "0x11400603",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x11400605": {
+    "id": 289408517,
+    "id_hex": "0x11400605",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "DISPLAY_BRIGHTNESS": {
+    "id": 289409539,
+    "id_hex": "0x11400a03",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 100,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HEADLIGHTS_STATE": {
+    "id": 289410560,
+    "id_hex": "0x11400e00",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HIGH_BEAM_LIGHTS_STATE": {
+    "id": 289410561,
+    "id_hex": "0x11400e01",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HAZARD_LIGHTS_STATE": {
+    "id": 289410563,
+    "id_hex": "0x11400e03",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HEADLIGHTS_SWITCH": {
+    "id": 289410576,
+    "id_hex": "0x11400e10",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HIGH_BEAM_LIGHTS_SWITCH": {
+    "id": 289410577,
+    "id_hex": "0x11400e11",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HAZARD_LIGHTS_SWITCH": {
+    "id": 289410579,
+    "id_hex": "0x11400e13",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CABIN_LIGHTS_STATE": {
+    "id": 289410817,
+    "id_hex": "0x11400f01",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CABIN_LIGHTS_SWITCH": {
+    "id": 289410818,
+    "id_hex": "0x11400f02",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CLUSTER_SWITCH_UI": {
+    "id": 289410868,
+    "id_hex": "0x11400f34",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CLUSTER_REQUEST_DISPLAY": {
+    "id": 289410871,
+    "id_hex": "0x11400f37",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ELECTRONIC_TOLL_COLLECTION_CARD_TYPE": {
+    "id": 289410873,
+    "id_hex": "0x11400f39",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ELECTRONIC_TOLL_COLLECTION_CARD_STATUS": {
+    "id": 289410874,
+    "id_hex": "0x11400f3a",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "FRONT_FOG_LIGHTS_STATE": {
+    "id": 289410875,
+    "id_hex": "0x11400f3b",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "FRONT_FOG_LIGHTS_SWITCH": {
+    "id": 289410876,
+    "id_hex": "0x11400f3c",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "REAR_FOG_LIGHTS_STATE": {
+    "id": 289410877,
+    "id_hex": "0x11400f3d",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "REAR_FOG_LIGHTS_SWITCH": {
+    "id": 289410878,
+    "id_hex": "0x11400f3e",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_CHARGE_STATE": {
+    "id": 289410881,
+    "id_hex": "0x11400f41",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_CHARGE_TIME_REMAINING": {
+    "id": 289410883,
+    "id_hex": "0x11400f43",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_REGENERATIVE_BRAKING_STATE": {
+    "id": 289410884,
+    "id_hex": "0x11400f44",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "TRAILER_PRESENT": {
+    "id": 289410885,
+    "id_hex": "0x11400f45",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "VEHICLE_CURB_WEIGHT": {
+    "id": 289410886,
+    "id_hex": "0x11400f46",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_FUEL_TYPE": {
+    "id": 289472773,
+    "id_hex": "0x11410105",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_EV_CONNECTOR_TYPE": {
+    "id": 289472775,
+    "id_hex": "0x11410107",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_EXTERIOR_DIMENSIONS": {
+    "id": 289472779,
+    "id_hex": "0x1141010b",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_MULTI_EV_PORT_LOCATIONS": {
+    "id": 289472780,
+    "id_hex": "0x1141010c",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "AP_POWER_STATE_REQ": {
+    "id": 289475072,
+    "id_hex": "0x11410a00",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "AP_POWER_STATE_REPORT": {
+    "id": 289475073,
+    "id_hex": "0x11410a01",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HW_KEY_INPUT": {
+    "id": 289475088,
+    "id_hex": "0x11410a10",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x11410a20": {
+    "id": 289475104,
+    "id_hex": "0x11410a20",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x11410a30": {
+    "id": 289475120,
+    "id_hex": "0x11410a30",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x11410f10": {
+    "id": 289476368,
+    "id_hex": "0x11410f10",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CLUSTER_DISPLAY_STATE": {
+    "id": 289476405,
+    "id_hex": "0x11410f35",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EPOCH_TIME": {
+    "id": 290457094,
+    "id_hex": "0x11500606",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "WATCHDOG_ALIVE": {
+    "id": 290459441,
+    "id_hex": "0x11500f31",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "VHAL_HEARTBEAT": {
+    "id": 290459443,
+    "id_hex": "0x11500f33",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "WHEEL_TICK": {
+    "id": 290521862,
+    "id_hex": "0x11510306",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_FUEL_CAPACITY": {
+    "id": 291504388,
+    "id_hex": "0x11600104",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_EV_BATTERY_CAPACITY": {
+    "id": 291504390,
+    "id_hex": "0x11600106",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "PERF_ODOMETER": {
+    "id": 291504644,
+    "id_hex": "0x11600204",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "PERF_VEHICLE_SPEED": {
+    "id": 291504647,
+    "id_hex": "0x11600207",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "PERF_VEHICLE_SPEED_DISPLAY": {
+    "id": 291504648,
+    "id_hex": "0x11600208",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "PERF_STEERING_ANGLE": {
+    "id": 291504649,
+    "id_hex": "0x11600209",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "PERF_REAR_STEERING_ANGLE": {
+    "id": 291504656,
+    "id_hex": "0x11600210",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ENGINE_COOLANT_TEMP": {
+    "id": 291504897,
+    "id_hex": "0x11600301",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ENGINE_OIL_TEMP": {
+    "id": 291504900,
+    "id_hex": "0x11600304",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ENGINE_RPM": {
+    "id": 291504901,
+    "id_hex": "0x11600305",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "FUEL_LEVEL": {
+    "id": 291504903,
+    "id_hex": "0x11600307",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "RANGE_REMAINING": {
+    "id": 291504904,
+    "id_hex": "0x11600308",
+    "access": "RW",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_BATTERY_LEVEL": {
+    "id": 291504905,
+    "id_hex": "0x11600309",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_BATTERY_INSTANTANEOUS_CHARGE_RATE": {
+    "id": 291504908,
+    "id_hex": "0x1160030c",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "ENV_OUTSIDE_TEMPERATURE": {
+    "id": 291505923,
+    "id_hex": "0x11600703",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_CHARGE_CURRENT_DRAW_LIMIT": {
+    "id": 291508031,
+    "id_hex": "0x11600f3f",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "EV_CHARGE_PERCENT_LIMIT": {
+    "id": 291508032,
+    "id_hex": "0x11600f40",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_TEMPERATURE_VALUE_SUGGESTION": {
+    "id": 291570965,
+    "id_hex": "0x11610515",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CLUSTER_NAVIGATION_STATE": {
+    "id": 292556600,
+    "id_hex": "0x11700f38",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "VEHICLE_MAP_SERVICE": {
+    "id": 299895808,
+    "id_hex": "0x11e00c00",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "OBD2_LIVE_FRAME": {
+    "id": 299896064,
+    "id_hex": "0x11e00d00",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "OBD2_FREEZE_FRAME": {
+    "id": 299896065,
+    "id_hex": "0x11e00d01",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "OBD2_FREEZE_FRAME_INFO": {
+    "id": 299896066,
+    "id_hex": "0x11e00d02",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "OBD2_FREEZE_FRAME_CLEAR": {
+    "id": 299896067,
+    "id_hex": "0x11e00d03",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INITIAL_USER_INFO": {
+    "id": 299896583,
+    "id_hex": "0x11e00f07",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SWITCH_USER": {
+    "id": 299896584,
+    "id_hex": "0x11e00f08",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CREATE_USER": {
+    "id": 299896585,
+    "id_hex": "0x11e00f09",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "REMOVE_USER": {
+    "id": 299896586,
+    "id_hex": "0x11e00f0a",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "USER_IDENTIFICATION_ASSOCIATION": {
+    "id": 299896587,
+    "id_hex": "0x11e00f0b",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "WATCHDOG_TERMINATED_PROCESS": {
+    "id": 299896626,
+    "id_hex": "0x11e00f32",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CLUSTER_REPORT_STATE": {
+    "id": 299896630,
+    "id_hex": "0x11e00f36",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_DEFROSTER": {
+    "id": 320865540,
+    "id_hex": "0x13200504",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_ELECTRIC_DEFROSTER_ON": {
+    "id": 320865556,
+    "id_hex": "0x13200514",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "WINDOW_LOCK": {
+    "id": 320867268,
+    "id_hex": "0x13200bc4",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x540": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "WINDOW_POS": {
+    "id": 322964416,
+    "id_hex": "0x13400bc0",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x100": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x400": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10000": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "WINDOW_MOVE": {
+    "id": 322964417,
+    "id_hex": "0x13400bc1",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x100": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x400": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10000": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_SIDE_MIRROR_HEAT": {
+    "id": 339739916,
+    "id_hex": "0x1440050c",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x3": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 2,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "MIRROR_Z_POS": {
+    "id": 339741504,
+    "id_hex": "0x14400b40",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -3,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -3,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -3,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "MIRROR_Z_MOVE": {
+    "id": 339741505,
+    "id_hex": "0x14400b41",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "MIRROR_Y_POS": {
+    "id": 339741506,
+    "id_hex": "0x14400b42",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -3,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -3,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -3,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "MIRROR_Y_MOVE": {
+    "id": 339741507,
+    "id_hex": "0x14400b43",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_AC_ON": {
+    "id": 354419973,
+    "id_hex": "0x15200505",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_MAX_AC_ON": {
+    "id": 354419974,
+    "id_hex": "0x15200506",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_MAX_DEFROST_ON": {
+    "id": 354419975,
+    "id_hex": "0x15200507",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x5": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x70": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_RECIRC_ON": {
+    "id": 354419976,
+    "id_hex": "0x15200508",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_DUAL_ON": {
+    "id": 354419977,
+    "id_hex": "0x15200509",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_AUTO_ON": {
+    "id": 354419978,
+    "id_hex": "0x1520050a",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_POWER_ON": {
+    "id": 354419984,
+    "id_hex": "0x15200510",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_AUTO_RECIRC_ON": {
+    "id": 354419986,
+    "id_hex": "0x15200512",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_BELT_BUCKLED": {
+    "id": 354421634,
+    "id_hex": "0x15200b82",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "INFO_DRIVER_SEAT": {
+    "id": 356516106,
+    "id_hex": "0x1540010a",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_FAN_SPEED": {
+    "id": 356517120,
+    "id_hex": "0x15400500",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 1,
+        "i_max": 7,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_FAN_DIRECTION": {
+    "id": 356517121,
+    "id_hex": "0x15400501",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_SEAT_TEMPERATURE": {
+    "id": 356517131,
+    "id_hex": "0x1540050b",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -2,
+        "i_max": 2,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -2,
+        "i_max": 2,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_ACTUAL_FAN_SPEED_RPM": {
+    "id": 356517135,
+    "id_hex": "0x1540050f",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_SEAT_VENTILATION": {
+    "id": 356517139,
+    "id_hex": "0x15400513",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_MEMORY_SELECT": {
+    "id": 356518784,
+    "id_hex": "0x15400b80",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_MEMORY_SET": {
+    "id": 356518785,
+    "id_hex": "0x15400b81",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 3,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_BELT_HEIGHT_POS": {
+    "id": 356518787,
+    "id_hex": "0x15400b83",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_BELT_HEIGHT_MOVE": {
+    "id": 356518788,
+    "id_hex": "0x15400b84",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_FORE_AFT_POS": {
+    "id": 356518789,
+    "id_hex": "0x15400b85",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_FORE_AFT_MOVE": {
+    "id": 356518790,
+    "id_hex": "0x15400b86",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_BACKREST_ANGLE_1_POS": {
+    "id": 356518791,
+    "id_hex": "0x15400b87",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_BACKREST_ANGLE_1_MOVE": {
+    "id": 356518792,
+    "id_hex": "0x15400b88",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_BACKREST_ANGLE_2_POS": {
+    "id": 356518793,
+    "id_hex": "0x15400b89",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_BACKREST_ANGLE_2_MOVE": {
+    "id": 356518794,
+    "id_hex": "0x15400b8a",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_HEIGHT_POS": {
+    "id": 356518795,
+    "id_hex": "0x15400b8b",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_HEIGHT_MOVE": {
+    "id": 356518796,
+    "id_hex": "0x15400b8c",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_DEPTH_POS": {
+    "id": 356518797,
+    "id_hex": "0x15400b8d",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_DEPTH_MOVE": {
+    "id": 356518798,
+    "id_hex": "0x15400b8e",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_TILT_POS": {
+    "id": 356518799,
+    "id_hex": "0x15400b8f",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_TILT_MOVE": {
+    "id": 356518800,
+    "id_hex": "0x15400b90",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_LUMBAR_FORE_AFT_POS": {
+    "id": 356518801,
+    "id_hex": "0x15400b91",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -10,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_LUMBAR_FORE_AFT_MOVE": {
+    "id": 356518802,
+    "id_hex": "0x15400b92",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_LUMBAR_SIDE_SUPPORT_POS": {
+    "id": 356518803,
+    "id_hex": "0x15400b93",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_LUMBAR_SIDE_SUPPORT_MOVE": {
+    "id": 356518804,
+    "id_hex": "0x15400b94",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_HEADREST_HEIGHT_MOVE": {
+    "id": 356518806,
+    "id_hex": "0x15400b96",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_HEADREST_ANGLE_POS": {
+    "id": 356518807,
+    "id_hex": "0x15400b97",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_HEADREST_ANGLE_MOVE": {
+    "id": 356518808,
+    "id_hex": "0x15400b98",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_HEADREST_FORE_AFT_POS": {
+    "id": 356518809,
+    "id_hex": "0x15400b99",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 10,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_HEADREST_FORE_AFT_MOVE": {
+    "id": 356518810,
+    "id_hex": "0x15400b9a",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -1,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "SEAT_OCCUPANCY": {
+    "id": 356518832,
+    "id_hex": "0x15400bb0",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "READING_LIGHTS_STATE": {
+    "id": 356519683,
+    "id_hex": "0x15400f03",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "READING_LIGHTS_SWITCH": {
+    "id": 356519684,
+    "id_hex": "0x15400f04",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_FAN_DIRECTION_AVAILABLE": {
+    "id": 356582673,
+    "id_hex": "0x15410511",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x75": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_TEMPERATURE_CURRENT": {
+    "id": 358614274,
+    "id_hex": "0x15600502",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x31": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x44": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "HVAC_TEMPERATURE_SET": {
+    "id": 358614275,
+    "id_hex": "0x15600503",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "float",
+    "areas": {
+      "0x31": {
+        "f_min": 16.0,
+        "f_max": 32.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x44": {
+        "f_min": 16.0,
+        "f_max": 32.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "DOOR_LOCK": {
+    "id": 371198722,
+    "id_hex": "0x16200b02",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "DOOR_POS": {
+    "id": 373295872,
+    "id_hex": "0x16400b00",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x20000000": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 1,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "TIRE_PRESSURE": {
+    "id": 392168201,
+    "id_hex": "0x17600309",
+    "access": "R",
+    "change_mode": "CONTINUOUS",
+    "value_type": "float",
+    "areas": {
+      "0x1": {
+        "f_min": 193.0,
+        "f_max": 300.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 193.0,
+        "f_max": 300.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 193.0,
+        "f_max": 300.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x8": {
+        "f_min": 193.0,
+        "f_max": 300.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "CRITICALLY_LOW_TIRE_PRESSURE": {
+    "id": 392168202,
+    "id_hex": "0x1760030a",
+    "access": "R",
+    "change_mode": "STATIC",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x8": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21100104": {
+    "id": 554696964,
+    "id_hex": "0x21100104",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21102a11": {
+    "id": 554707473,
+    "id_hex": "0x21102a11",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21202a11": {
+    "id": 555756049,
+    "id_hex": "0x21202a11",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21400f34": {
+    "id": 557846324,
+    "id_hex": "0x21400f34",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21400f37": {
+    "id": 557846327,
+    "id_hex": "0x21400f37",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21402a11": {
+    "id": 557853201,
+    "id_hex": "0x21402a11",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21410f35": {
+    "id": 557911861,
+    "id_hex": "0x21410f35",
+    "access": "W",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21602a11": {
+    "id": 559950353,
+    "id_hex": "0x21602a11",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21700f38": {
+    "id": 560992056,
+    "id_hex": "0x21700f38",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21702a12": {
+    "id": 560998930,
+    "id_hex": "0x21702a12",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21e00f36": {
+    "id": 568332086,
+    "id_hex": "0x21e00f36",
+    "access": "R",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x21e01111": {
+    "id": 568332561,
+    "id_hex": "0x21e01111",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x0": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x23400103": {
+    "id": 591397123,
+    "id_hex": "0x23400103",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -100,
+        "i_max": 100,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x2": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -100,
+        "i_max": 100,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10000": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": -100,
+        "i_max": 100,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x25600102": {
+    "id": 627048706,
+    "id_hex": "0x25600102",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "float",
+    "areas": {
+      "0x31": {
+        "f_min": -10.0,
+        "f_max": 10.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x44": {
+        "f_min": -10.0,
+        "f_max": 10.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  },
+  "0x26200101": {
+    "id": 639631617,
+    "id_hex": "0x26200101",
+    "access": "RW",
+    "change_mode": "ON_CHANGE",
+    "value_type": "int32",
+    "areas": {
+      "0x1": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x4": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x10": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      },
+      "0x40": {
+        "f_min": 0.0,
+        "f_max": 0.0,
+        "i_min": 0,
+        "i_max": 0,
+        "i64_min": 0,
+        "i64_max": 0
+      }
+    }
+  }
+}

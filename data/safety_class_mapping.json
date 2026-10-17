@@ -1,0 +1,822 @@
+{
+  "hot_car": {
+    "vhal_trigger": [
+      {
+        "name": "HVAC_POWER_ON",
+        "area": 117,
+        "area_hex": "0x75",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "dumpsys_ivehicle"
+      },
+      {
+        "name": "HVAC_AC_ON",
+        "area": 117,
+        "area_hex": "0x75",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "dumpsys_ivehicle"
+      },
+      {
+        "name": "WINDOW_POS",
+        "area": 16,
+        "area_hex": "0x10",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "direct_set"
+      },
+      {
+        "name": "ENV_OUTSIDE_TEMPERATURE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [
+      "temperature",
+      "humidity"
+    ],
+    "query_names_available": [
+      "hvac_on",
+      "hvac_ac_on",
+      "outside_temp"
+    ],
+    "ui_actions_possible": [
+      "open_window",
+      "turn_on_ac",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2",
+      "L3"
+    ]
+  },
+  "unbuckled": {
+    "vhal_trigger": [
+      {
+        "name": "SEAT_BELT_BUCKLED",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "direct_set"
+      },
+      {
+        "name": "SEAT_OCCUPANCY",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "PERF_VEHICLE_SPEED",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "seatbelt_driver",
+      "seat_occupied_driver",
+      "speed"
+    ],
+    "ui_actions_possible": [
+      "warn_driver",
+      "notification",
+      "seatbelt_prompt"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2",
+      "L3"
+    ]
+  },
+  "low_fuel": {
+    "vhal_trigger": [
+      {
+        "name": "FUEL_LEVEL",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "FUEL_LEVEL_LOW",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "RANGE_REMAINING",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "unreadable"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "fuel_level",
+      "fuel_low",
+      "range_remaining"
+    ],
+    "ui_actions_possible": [
+      "nav_to_gas",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2",
+      "L3"
+    ]
+  },
+  "open_door": {
+    "vhal_trigger": [
+      {
+        "name": "DOOR_POS",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "direct_set"
+      },
+      {
+        "name": "DOOR_LOCK",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "direct_set"
+      },
+      {
+        "name": "PERF_VEHICLE_SPEED",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "door_open_driver",
+      "speed"
+    ],
+    "ui_actions_possible": [
+      "close_prompt",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ]
+  },
+  "distracted_driving": {
+    "vhal_trigger": [
+      {
+        "name": "INFO_DRIVER_SEAT",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "warning",
+      "limit_interaction"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "No dedicated distraction VHAL; proxy via driver seat + speed"
+  },
+  "low_tire": {
+    "vhal_trigger": [
+      {
+        "name": "TIRE_PRESSURE",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "float",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "CRITICALLY_LOW_TIRE_PRESSURE",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "tire_pressure_fl",
+      "tire_pressure_fr",
+      "tire_pressure_rl",
+      "tire_pressure_rr",
+      "tire_pressure_low_fl"
+    ],
+    "ui_actions_possible": [
+      "notification",
+      "advise_stop"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ]
+  },
+  "fog": {
+    "vhal_trigger": [
+      {
+        "name": "FRONT_FOG_LIGHTS_STATE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "FRONT_FOG_LIGHTS_SWITCH",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "direct_set"
+      },
+      {
+        "name": "REAR_FOG_LIGHTS_STATE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [
+      "temperature",
+      "humidity"
+    ],
+    "query_names_available": [
+      "fog_lights_front",
+      "fog_lights_rear"
+    ],
+    "ui_actions_possible": [
+      "enable_fog_lights",
+      "defroster_on",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2",
+      "L3"
+    ]
+  },
+  "night": {
+    "vhal_trigger": [
+      {
+        "name": "NIGHT_MODE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [
+      "light"
+    ],
+    "query_names_available": [
+      "night_mode"
+    ],
+    "ui_actions_possible": [
+      "dim_display",
+      "headlights_on",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2",
+      "L3"
+    ]
+  },
+  "speeding": {
+    "vhal_trigger": [
+      {
+        "name": "PERF_VEHICLE_SPEED",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "PERF_VEHICLE_SPEED_DISPLAY",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "speed",
+      "speed_display"
+    ],
+    "ui_actions_possible": [
+      "warn",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "Read-only; agent must reason from speed + gps context"
+  },
+  "parking_brake": {
+    "vhal_trigger": [
+      {
+        "name": "PARKING_BRAKE_ON",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "PARKING_BRAKE_AUTO_APPLY",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "PERF_VEHICLE_SPEED",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "parking_brake",
+      "speed"
+    ],
+    "ui_actions_possible": [
+      "warn",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ]
+  },
+  "engine_overheat": {
+    "vhal_trigger": [
+      {
+        "name": "ENGINE_COOLANT_TEMP",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "ENGINE_OIL_TEMP",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "engine_coolant",
+      "engine_oil_temp"
+    ],
+    "ui_actions_possible": [
+      "notification",
+      "advise_stop",
+      "turn_off_hvac"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2",
+      "L3"
+    ]
+  },
+  "brake_fluid_low": {
+    "vhal_trigger": [
+      {
+        "name": "BRAKE_FLUID_LEVEL",
+        "status": "NO_VHAL_SUPPORT"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1"
+    ],
+    "note": "NO_VHAL_SUPPORT — prop missing in emulator catalog; candidate: use PARKING_BRAKE_ON + gps_context proxy"
+  },
+  "collision_warning": {
+    "vhal_trigger": [
+      {
+        "name": "FORWARD_COLLISION_WARNING_STATE",
+        "status": "NO_VHAL_SUPPORT"
+      },
+      {
+        "name": "EMERGENCY_LANE_KEEP_ASSIST_STATE",
+        "status": "NO_VHAL_SUPPORT"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "notification",
+      "brake_prompt"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "NO_VHAL_SUPPORT — AOSP VHAL has these but not in emulator catalog; proxy via gps_context only (L1)"
+  },
+  "lane_departure": {
+    "vhal_trigger": [
+      {
+        "name": "LANE_DEPARTURE_WARNING_STATE",
+        "status": "NO_VHAL_SUPPORT"
+      },
+      {
+        "name": "LANE_KEEP_ASSIST_STATE",
+        "status": "NO_VHAL_SUPPORT"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "notification",
+      "warn"
+    ],
+    "response_levels_viable": [
+      "L1"
+    ],
+    "note": "NO_VHAL_SUPPORT — emulator lacks ADAS props; gps_context only (L1)"
+  },
+  "charging_anomaly": {
+    "vhal_trigger": [
+      {
+        "name": "EV_CHARGE_STATE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "EV_CHARGE_CURRENT_DRAW_LIMIT",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "unreadable"
+      },
+      {
+        "name": "EV_CHARGE_TIME_REMAINING",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "EV_BATTERY_INSTANTANEOUS_CHARGE_RATE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "notification",
+      "unplug_prompt"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "EV-only; valid on EV emulator config"
+  },
+  "seatbelt_tension": {
+    "vhal_trigger": [
+      {
+        "name": "SEAT_BELT_BUCKLED",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "direct_set"
+      },
+      {
+        "name": "SEAT_BELT_HEIGHT_POS",
+        "area": 1,
+        "area_hex": "0x1",
+        "value_type": "int32",
+        "access": "RW",
+        "writable": true,
+        "write_method": "direct_set"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "seatbelt_driver"
+    ],
+    "ui_actions_possible": [
+      "adjust_height",
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "No explicit TENSION prop; proxy via BUCKLED + HEIGHT_POS"
+  },
+  "steering_issue": {
+    "vhal_trigger": [
+      {
+        "name": "PERF_STEERING_ANGLE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "PERF_REAR_STEERING_ANGLE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "steering_angle"
+    ],
+    "ui_actions_possible": [
+      "notification",
+      "advise_stop"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "No EPAS fault prop; proxy via abnormal angle reading"
+  },
+  "airbag_warning": {
+    "vhal_trigger": [
+      {
+        "name": "AIRBAG_STATE",
+        "status": "NO_VHAL_SUPPORT"
+      },
+      {
+        "name": "SRS_WARNING",
+        "status": "NO_VHAL_SUPPORT"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1"
+    ],
+    "note": "NO_VHAL_SUPPORT — no airbag/SRS fault prop"
+  },
+  "abs_warning": {
+    "vhal_trigger": [
+      {
+        "name": "ABS_ACTIVE",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "abs_active"
+    ],
+    "ui_actions_possible": [
+      "notification",
+      "advise_caution"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "ABS_ACTIVE is transient during braking, not a fault state; true ABS fault not exposed"
+  },
+  "transmission_issue": {
+    "vhal_trigger": [
+      {
+        "name": "GEAR_SELECTION",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "CURRENT_GEAR",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "gear",
+      "current_gear"
+    ],
+    "ui_actions_possible": [
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1"
+    ],
+    "note": "No TRANSMISSION_FAULT prop; proxy via gear mismatch (selected != current)"
+  },
+  "oil_pressure_low": {
+    "vhal_trigger": [
+      {
+        "name": "ENGINE_OIL_LEVEL",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      },
+      {
+        "name": "ENGINE_OIL_TEMP",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "engine_oil_temp"
+    ],
+    "ui_actions_possible": [
+      "notification",
+      "advise_stop"
+    ],
+    "response_levels_viable": [
+      "L1",
+      "L2"
+    ],
+    "note": "No OIL_PRESSURE prop; proxy via OIL_LEVEL + OIL_TEMP"
+  },
+  "battery_12v_low": {
+    "vhal_trigger": [
+      {
+        "name": "EV_BATTERY_LEVEL",
+        "area": 0,
+        "area_hex": "0x0",
+        "value_type": "int32",
+        "access": "R",
+        "writable": true,
+        "write_method": "unknown"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [
+      "ev_battery"
+    ],
+    "ui_actions_possible": [
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1"
+    ],
+    "note": "NO_12V_PROP — only EV_BATTERY_LEVEL (traction battery); 12V aux battery not in catalog"
+  },
+  "electronic_malfunction": {
+    "vhal_trigger": [
+      {
+        "name": "CHECK_ENGINE",
+        "status": "NO_VHAL_SUPPORT"
+      },
+      {
+        "name": "MIL_ON",
+        "status": "NO_VHAL_SUPPORT"
+      }
+    ],
+    "sensors": [],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1"
+    ],
+    "note": "NO_VHAL_SUPPORT — no MIL/CEL/ECU-fault prop; gps_context only"
+  },
+  "wipers_fail": {
+    "vhal_trigger": [
+      {
+        "name": "WINDSHIELD_WIPERS_STATE",
+        "status": "NO_VHAL_SUPPORT"
+      },
+      {
+        "name": "WINDSHIELD_WIPERS_SWITCH",
+        "status": "NO_VHAL_SUPPORT"
+      }
+    ],
+    "sensors": [
+      "humidity"
+    ],
+    "query_names_available": [],
+    "ui_actions_possible": [
+      "notification"
+    ],
+    "response_levels_viable": [
+      "L1"
+    ],
+    "note": "NO_VHAL_SUPPORT — wiper props not in emulator catalog"
+  }
+}
